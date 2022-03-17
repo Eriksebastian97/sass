@@ -1,0 +1,46 @@
+.menu2 {
+    height: 80vh;
+    background-image: url(../img/fondo1.jpg);
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr); 
+
+    .info {
+        grid-column: 3 / 10;
+        grid-row: 3 / 7;
+        color: azure; 
+        :hover {
+            animation: info 10s;
+         }
+        }
+}
+
+@keyframes info {
+    0% {
+      background-color: blue; }
+    25% {
+      border-radius: 30%; }
+    50% {
+      width: 600px; }
+    75% {
+      background-color: #09095f; }
+    90% {
+      height: 120px; } }
+  
+
+      .menu2 h3 {
+        font-family: sans-serif;
+        font-size: 2em;
+        font-weight: 380; }
+
+        .menu2 h1 {
+            font-size: 5rem;
+            color: aqua; 
+        
+            p {
+                font-weight: 500;
+                font-family: sans-serif; }
+              
+        }

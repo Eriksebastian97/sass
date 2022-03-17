@@ -1,0 +1,288 @@
+@import "fuente";
+@import "variables";
+@import "body";
+@import "header";
+@import "menu";
+@import "footer";
+@import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,300;1,100 & display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+ /* mapa*/
+
+
+
+
+
+
+
+
+
+
+
+
+.oceano{
+    background-color:grey;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    align-items: center;
+}
+
+.oceano .logo{
+    width: 7rem;
+    height: 7rem;
+    grid-column: 2/3;
+}
+
+
+
+
+
+
+.logo:hover{ 
+  animation: logo 10s;
+    
+}
+
+@keyframes logo {
+     0%{
+
+        transform: scale(2);
+        
+    }
+
+    25%{
+        transition: all 2s;   
+    }
+
+    75%{
+        border-radius: 4cm;
+    }
+
+    99%{
+        border-radius: 5cm;
+    }
+}
+
+
+.oceano .menu{
+    grid-column: 4/7;
+    display: flex;
+    justify-content: space-around;
+}
+
+.oceano .menu li{
+    list-style: none;
+   background-color: blue;
+ border-style: double;
+ width: 6em;
+ height: 2em;
+ text-align: center;
+  
+}
+
+
+
+.oceano .menu a{
+    text-decoration: none;
+    color: aqua;
+    cursor: pointer;
+}
+
+.oceano .menu :hover                                                                                                                                                                               {
+    transform: scale(2);
+    transition: all 3s;
+}
+
+.oceano .menu a:hover{
+    
+    color: aliceblue;
+    
+    
+
+
+    
+}
+
+.oceano .bar{
+    display: none;
+}
+
+.oceano .tienda{
+    grid-column: 8 / 9;
+}
+
+/* menu principal */
+
+
+.menu2{
+     height: 80vh;
+     background-image:   url(../img/fondo1.jpg);
+     background-size: cover;
+     max-width: 100%;
+     display: grid;
+     grid-template-columns: repeat(10, 1fr);
+     grid-template-rows:repeat(8, 1fr);
+     
+}
+
+.menu2 .info { 
+
+    grid-column: 3 / 10 ;
+    grid-row: 3 / 7;
+    color: azure;
+    
+}
+
+.info :hover{
+    animation: info 10s ;
+  
+    
+}
+
+@keyframes info { 
+   0%{
+       background-color: blue;
+      
+   }
+   25%{
+       border-radius: 30%;
+     
+   }
+
+   50%{
+       width: 600px;
+   }
+   
+   75%{
+       background-color:rgb(9, 9, 95);
+   }
+   90%{
+       height: 120px;
+   }
+
+}
+
+    
+
+.menu2 h3{
+    font-family: sans-serif;
+    font-size: 2em;
+    font-weight: 380;
+    
+}
+
+.menu2 h1{
+    font-size: 5rem;
+    color: aqua;
+}
+
+.menu2 p{
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+/* footer */
+
+.footer{
+    display: grid;
+    height: 200px;
+    align-items: center;
+    background-color: grey;
+    color: aqua;
+    grid-template-areas:
+    "libro  redes social" ;
+}
+
+.footer .libro{
+    grid-template-areas: libro;
+    display: flex;
+    justify-content: center;
+    padding: 26px;
+    
+    color:aqua ;
+   
+}
+
+
+.footer .libro {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.footer .redes{
+    grid-template-areas:redes ;
+    text-align: center;
+}
+
+.footer .social{
+   
+    grid-template-areas: social;
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+
+$listaAnidada: (red,libro ) (green, paginas) (yellow,secciones ) ;
+    
+   
+
+
+@each $color, $animal in $linstaAnidad{
+    .#{$animal}-icon{
+        fill: $color
+        
+    }
+        
+    
+    
+}
+
+
+
+.animal{
+    ;
+    background-color: aqua; 
+}
+
+.animal--perro{
+    @extend .animal; 
+    border-radius: 5px;
+}
+
+
+.animal--gato{
+    @extend .animal;
+    border: 5px solid orange;
+}
+
+.animal--tigre{
+    @extend .animal;
+    border: 5px solid blue ;
+}
+
+
+
+
+@mixin size ( $width , $height){
+    height: $height;
+    width: $width;
+}
+
+.mixin_ejemplo{
+    @include size(300px, 50px);
+    background-color: greenyellow;
+
+}
+

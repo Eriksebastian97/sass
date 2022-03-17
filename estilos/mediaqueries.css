@@ -1,0 +1,47 @@
+@media only screen and (max-width: 600px){
+    .oceano{
+        position: relative;
+    }
+.oceano .tienda{
+    display: none;
+}
+
+
+.oceano .bar{
+    display: block;
+    grid-column: 8 / 9;
+    font-size: 2em;
+    cursor: pointer;
+}
+ .oceano .menu {
+    display: grid;
+    justify-content: space-between;
+    
+     
+     
+ }
+/* menu principal*/
+
+.menu2 .info {
+    grid-column: 2 / 10 ;
+    grid-row: 4 / 8;
+
+}
+
+.menu2 h1{
+    font-size: 4rem;
+
+}
+
+/* fopter*/
+.footer .redes{
+    display: none;
+}
+
+.footer .social{
+    text-align: center;
+
+}
+
+ }
+    

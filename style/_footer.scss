@@ -1,0 +1,51 @@
+.footer {
+    display: grid;
+    height: 200px;
+    align-items: center;
+    background-color: grey;
+    color: aqua;
+    grid-template-areas: "libro  redes social"; 
+
+    .libro {
+        grid-template-areas: libro;
+        display: flex;
+        justify-content: center;
+        padding: 26px;
+        color: aqua; 
+    
+        .libro {
+            font-size: 1.5em;
+            margin-right: 15px;
+        
+            .redes {
+                grid-template-areas: redes;
+                text-align: center;
+            
+                .social {
+                    grid-template-areas: social;
+                    font-size: 1.5em;
+                    margin-right: 20px; }
+            
+            }
+        
+        }
+    }
+
+}
+
+
+$redes:(
+    libro:#55acee,
+    paginas :#23b421,
+    secciones:#41238b85,
+);
+
+
+@each $red, $color in $redes{
+    .btn--#{$red}{
+        background-color: $color;
+    }
+    
+}
+
+

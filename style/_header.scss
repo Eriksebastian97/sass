@@ -1,0 +1,66 @@
+.oceano {
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    .logo {
+        width: 7rem;
+        height: 7rem;
+        grid-column: 2/3;
+        :hover {
+            animation: logo 10s; }
+          
+         
+}
+
+
+  
+
+
+@keyframes logo {
+    0% {
+      transform: scale(2); }
+    25% {
+      transition: all 2s; }
+    75% {
+      border-radius: 4cm; }
+    99% {
+      border-radius: 5cm; } }
+  }
+
+
+
+.oceano 
+
+      .menu {
+    grid-column: 4/7;
+    display: flex;
+    justify-content: space-around; 
+
+          li {
+        list-style: none;
+        background-color: blue;
+        border-style: double;
+        width: 6em;
+        height: 2em;
+        text-align: center; 
+    
+               a {
+            text-decoration: none;
+            color: aqua;
+            cursor: pointer; }
+    }
+
+    :hover {
+        transform: scale(2);
+        transition: all 3s; }
+
+        a:hover {
+            color: aliceblue; } 
+ 
+            .bar {
+                display: none; }
+
+                .tienda {
+                    grid-column: 8 / 9; }    
+}
